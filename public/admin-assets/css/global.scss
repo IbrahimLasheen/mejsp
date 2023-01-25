@@ -1,0 +1,356 @@
+/**
+    All Global Style Is Type Here
+    - Main Global Style
+    - Custom Style For Plugins
+*/
+
+@import "colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+
+/* Start Global Style */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $background;
+    font-family: "Baloo Bhaijaan 2", cursive;
+    transition: padding 0.3s linear;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgb(161, 161, 161);
+        border-radius: 2px !important;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #686868;
+    }
+}
+.pagination{
+    margin-bottom: 0px;
+}
+.load-overlay {
+    background-color: #f1f1f1;
+    color: #212121;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999999999999;
+
+    .sk-folding-cube {
+        margin: 20px auto;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+
+    .sk-folding-cube .sk-cube {
+        float: left;
+        width: 50%;
+        height: 50%;
+        position: relative;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    .sk-folding-cube .sk-cube:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #212121;
+        -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+        animation: sk-foldCubeAngle 2.4s infinite linear both;
+        -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+    .sk-folding-cube .sk-cube2 {
+        -webkit-transform: scale(1.1) rotateZ(90deg);
+        transform: scale(1.1) rotateZ(90deg);
+    }
+    .sk-folding-cube .sk-cube3 {
+        -webkit-transform: scale(1.1) rotateZ(180deg);
+        transform: scale(1.1) rotateZ(180deg);
+    }
+    .sk-folding-cube .sk-cube4 {
+        -webkit-transform: scale(1.1) rotateZ(270deg);
+        transform: scale(1.1) rotateZ(270deg);
+    }
+    .sk-folding-cube .sk-cube2:before {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+    }
+    .sk-folding-cube .sk-cube3:before {
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+    .sk-folding-cube .sk-cube4:before {
+        -webkit-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+    }
+    @-webkit-keyframes sk-foldCubeAngle {
+        0%,
+        10% {
+            -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+            opacity: 0;
+        }
+        25%,
+        75% {
+            -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+            opacity: 1;
+        }
+        90%,
+        100% {
+            -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes sk-foldCubeAngle {
+        0%,
+        10% {
+            -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+            opacity: 0;
+        }
+        25%,
+        75% {
+            -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+            opacity: 1;
+        }
+        90%,
+        100% {
+            -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+            opacity: 0;
+        }
+    }
+}
+button {
+    border: 0px;
+    background-color: transparent;
+}
+form {
+    label {
+        color: #505659;
+        font-size: 15px;
+    }
+    small {
+        font-size: 12px;
+    }
+    // ::placeholder{
+    //     font-size: 12px;
+    // }
+}
+a {
+    text-decoration: none !important;
+}
+li {
+    list-style: none;
+}
+.links-bar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    a {
+        font-size: 13px;
+        color: $blue;
+    }
+    .links-bar-item-slash {
+        margin: 0px 3px;
+    }
+    a:first-child {
+        font-size: 20px;
+        color: #000;
+    }
+}
+.table-with-avatar {
+    td {
+        padding: 5px 0.75rem !important;
+        line-height: 45px !important;
+    }
+    img {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+.error {
+    color: red;
+}
+
+.box-white {
+    padding: 20px;
+    background-color: #fff;
+    border: solid 1px $border-color;
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+.star {
+    font-weight: bold;
+    color: red;
+}
+.alert-error {
+    background-color: #ff3333;
+    color: #fff;
+    margin-top: 3px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 13.5px;
+}
+
+.file-image {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn-main {
+    background-color: $main-color;
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: $radius;
+    transition: all 0.1s linear;
+    &:disabled {
+        cursor: not-allowed;
+        background-color: gray !important;
+    }
+    &:hover {
+        background-color: $second-color;
+    }
+}
+#backToTopButton {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    color: #fff;
+    background-color: $blue;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: none;
+}
+// Result Messages
+.box-error {
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 8px;
+    border: solid 1px #eee;
+    border-right: 5px solid red;
+    border-radius: 2px;
+}
+.box-success {
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 2px;
+    border-right: 5px solid rgb(0, 190, 10);
+    box-shadow: none !important;
+}
+.action-dropdown {
+    position: absolute;
+    top: 5px;
+    right: 17px;
+    .dropdown-toggle {
+        text-align: center;
+        background-color: white;
+        font-size: 18px;
+        padding: 10px 15px 2px 15px;
+        border-radius: 0px 0px 0px 5px;
+    }
+}
+/* Custom Bootstrap */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: $radius;
+    &:focus {
+        color: #495057;
+        background-color: #f8f8f8;
+        border: solid 1px $main-color;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+.dropdown-toggle::after {
+    // ARROW Dropdown btn remove
+    display: none !important;
+}
+.input-group-text-rtl {
+    border-radius:  0px  0.25rem  0.25rem 0px!important;
+}
+.form-control-rtl{
+    border-radius:   0.25rem  0px 0px 0.25rem !important;
+
+}
+.alert-dismissible .close {
+    position: absolute;
+    top: -2px;
+    right: auto !important;
+    left: -5px !important;
+    z-index: 2;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+.alert-dismissible {
+    padding-right: 15px !important;
+    padding-left: 4rem;
+}
+
+/* Swal */
+.swal-text {
+    text-align: center !important;
+}
+
+// CK Editor
+.note-toolbar {
+    direction: ltr;
+    text-align: left;
+}
+.note-editable {
+    text-align: right !important;
+    min-height: 300px;
+}
+.form-control-file,
+.form-control-range {
+    display: none !important;
+}
+.note-form-label {
+    display: none !important;
+}

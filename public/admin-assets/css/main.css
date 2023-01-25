@@ -1,0 +1,216 @@
+/*
+    All Style For The Website
+    - Style For Pages
+*/
+/*
+    Website Colors
+*/
+/* Buttons Colors */
+#all-admins table img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+#all-admins table td {
+  padding: 4px 0.75rem;
+  line-height: 45px;
+}
+
+#all-articles .article {
+  position: relative;
+}
+
+#all-articles .article img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#all-articles .article .article-dropdown {
+  position: absolute;
+  right: 2px;
+  top: 0px;
+}
+
+#all-articles .article .article-dropdown .dropdown-toggle {
+  text-align: center;
+  background-color: white;
+  font-size: 18px;
+  padding: 10px 15px 2px 15px;
+  border-radius: 0px 0px 0px 5px;
+}
+
+#contacts .senders {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#contacts .senders .image {
+  float: right;
+  width: 65px;
+}
+
+#contacts .senders .image img {
+  width: 55px;
+  height: 55px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: solid 1px #eee;
+  background-color: #fff;
+  padding: 3px;
+}
+
+#contacts .senders .info {
+  float: right;
+}
+
+#messageBox {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+#home-dashboard .statistics {
+  color: #fff;
+  position: relative;
+  height: 110px;
+}
+
+#home-dashboard .statistics .box-icon {
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 35px);
+  font-size: 60px;
+  color: #000;
+  opacity: 0.3;
+}
+
+#media .images {
+  cursor: pointer;
+  position: relative;
+}
+
+#media .btn-delete {
+  position: absolute;
+  top: 2px !important;
+  right: 20px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 33px !important;
+  color: #e01717;
+  border-radius: 0px 0px 0px 5px;
+}
+
+#navbar {
+  position: relative;
+}
+
+.inputImgName {
+  position: absolute;
+  z-index: -10000 !important;
+  right: 0px;
+  top: -3000000%;
+  height: 0px;
+}
+
+#journals {
+  position: relative;
+}
+
+#journals .cover {
+  height: 180px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+#journals .logo {
+  padding-bottom: 70px;
+}
+
+#journals .logo img {
+  position: absolute;
+  top: 110px;
+  width: 128px;
+  height: 128px;
+  right: calc(50% - 68px);
+  background-color: #fff;
+  border: solid 1px #eee;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+
+#journals-create .buttons-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: fixed;
+  bottom: 0px;
+  border-radius: 3px;
+  padding: 10px 10px;
+  width: calc(100% - 290px);
+  z-index: 99999;
+}
+
+#journals-researches .title {
+  color: #007bff;
+  font-size: 17px;
+}
+
+#journals-researches svg, #journals-researches i {
+  width: 22px;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+#journals-researches div {
+  color: #3a3a3a;
+}
+
+#journals-researches .dropdown {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+}
+
+#journals-researches .dropdown .dropdown-toggle {
+  text-align: center;
+  background-color: transparent;
+  font-size: 18px !important;
+  outline: none !important;
+  border: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  color: #212121;
+}
+
+#journals-researches .dropdown .dropdown-toggle svg, #journals-researches .dropdown .dropdown-toggle i {
+  width: 22px;
+  margin-left: 0px;
+}
+
+#international-credits .table-with-avatar img {
+  width: 100%;
+  height: 45px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0px !important;
+}
+
+@media (max-width: 768px) {
+  #journals-create .buttons-box {
+    border-top: 1px solid #ddd;
+    border-radius: 0px;
+    right: 0px;
+    width: calc(100% + 30px);
+  }
+}
+/*# sourceMappingURL=main.css.map */

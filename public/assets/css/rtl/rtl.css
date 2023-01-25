@@ -1,0 +1,84 @@
+body {
+  direction: rtl;
+}
+section,
+div,
+main,
+a,
+h1,
+span,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+small,
+li,
+ul,
+ol,
+input,
+textarea {
+  text-align: right;
+}
+body {
+    overflow-x: hidden !important;
+}
+.dropdown-menu {
+    border-bottom : none !important;
+    box-shadow: 0 6px 12pxrgba(0,0,0,.175);
+    width: 380px;
+    text-align: right;
+    background-color: #fff;
+    border: 1px solid #e8eaed;
+    border-top: 0;
+    font-family: Noto Naskh Arabic,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    padding-top: 0;
+}
+.dropdown-item-journal {
+    white-space: inherit !important;
+}
+.badge-notify {
+    background: red;
+    position: absolute;
+    top: 13px;
+    left: 38px;
+    border-radius: 50%;
+    color: white;
+}
+.badge-notify-journal {
+    top: 25px;
+}
+.navbar-toggler-journal {
+    padding: 0.65rem 0.75rem !important; background-color: white; z-index: 100;
+}
+.navbar-brand-journal img {
+    width: 119px; height: 47px; object-fit: cover;
+}
+@media only screen and (max-width: 800px) {
+    .dropdown-menu {
+        margin-left: 3% !important;
+        width: 320px;
+    }
+    .dropdown-menu.show {
+        display: grid !important;
+        justify-content: center;
+    }
+    .justify-between {
+        justify-content: space-between;
+    }
+    .navbar .container #div-desktop .dropdown-menu {
+        background-color: #fff;
+        width: 100%;  max-width: 100% !important;
+    }
+    .noti {
+        background-color: #fff;
+        max-width: 25rem !important;
+        line-height: 24px;
+        text-align: right;
+        margin-left: auto !important; margin-right: auto !important;
+        border-bottom: none;
+        display: grid; justify-content: center;
+    }
+}

@@ -1,0 +1,196 @@
+/*
+    Aside Bar Style
+*/
+/*
+    Website Colors
+*/
+/* Buttons Colors */
+#aside {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  -webkit-transition: right 0.3s linear;
+  transition: right 0.3s linear;
+  z-index: 999;
+  background-color: #ffffff;
+  border: solid 1px #dee4ec;
+  overflow-y: scroll;
+}
+
+#aside::-webkit-scrollbar {
+  width: 0px;
+}
+
+#aside .side-menu .side-item-category {
+  margin: 0px 19px;
+  color: #212121;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#aside .side-menu .side-item a {
+  cursor: pointer;
+  display: block;
+  padding: 3px 20px;
+  position: relative;
+  color: #6d6d6d;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#aside .side-menu .side-item a:hover {
+  color: #278cc2;
+}
+
+#aside .side-menu .side-item a .rotate-icon {
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
+}
+
+#aside .side-menu .side-item a .side-icon {
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+}
+
+#aside .side-menu .side-item .active {
+  font-weight: bold;
+  color: #278cc2;
+}
+
+#aside .side-menu .side-item .active::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 5px;
+  background-color: #278cc2;
+}
+
+#aside .side-menu .sub-menu {
+  display: none;
+}
+
+#aside .side-menu .sub-menu .sub-item a {
+  font-size: 13px;
+}
+
+#aside .side-menu .sub-menu .sub-item .side-icon {
+  position: relative;
+}
+
+#aside .side-menu .sub-menu .sub-item .side-icon::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  border-radius: 3px;
+  background-color: #6d6d6d;
+  top: -5.3px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#aside .side-menu .sub-menu .sub-item .side-icon::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 1px;
+  border-radius: 3px;
+  background-color: #6d6d6d;
+  top: -3.2px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#aside .side-menu .show {
+  display: block;
+}
+
+#navbar {
+  background-color: #ffffff;
+  height: 65px;
+  width: 100%;
+  top: 0px;
+  border-bottom: 1px solid #dee4ec;
+  line-height: 65px;
+  z-index: 99;
+  /* IF Clicked Button #btn-sidebar-toggle Start This Action*/
+}
+
+#navbar #btn-aside-toggle {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  float: right;
+  padding: 0px 20px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+#navbar #btn-aside-toggle:hover {
+  background-color: #0162e8;
+  color: #ffff;
+}
+
+#navbar .toggle {
+  right: -260px !important;
+}
+
+#navbar .profile button {
+  background-color: transparent !important;
+}
+
+#navbar .profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#navbar .message {
+  margin-top: 10px;
+  color: #212121;
+  display: block;
+  text-align: center;
+  line-height: 52px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+#navbar .message .count {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 11px;
+  background-color: #dc3545;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  #aside .aside-overlay {
+    background-color: transparent !important;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: calc(100% - 260px);
+    display: none;
+  }
+}
+/*# sourceMappingURL=aside.css.map */

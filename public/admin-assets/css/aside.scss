@@ -1,0 +1,190 @@
+/*
+    Aside Bar Style
+*/
+
+@import "colors.scss";
+
+#aside {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    transition: right 0.3s linear;
+    z-index: 999;
+    background-color: $white;
+    border: solid 1px $border-color;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    // ul li a
+    .side-menu {
+        .side-item-category {
+            margin: 0px 19px;
+            color: #212121;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .side-item {
+            a {
+                cursor: pointer;
+                display: block;
+                padding: 3px 20px;
+                position: relative;
+                color: #6d6d6d;
+                font-size: 15px;
+                margin-bottom: 10px;
+                &:hover {
+                    color: $main-color;
+                }
+
+                .rotate-icon {
+                    transform: rotate(180deg) !important; // Replace
+                }
+
+                .side-icon {
+                    display: inline-block;
+                    width: 25px;
+                    text-align: center;
+                }
+            }
+            // Active Link
+            .active {
+                // Solid Style Before Link
+                font-weight: bold;
+                color: $main-color;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    height: 100%;
+                    width: 5px;
+                    background-color: $main-color;
+                }
+            }
+        }
+        // Sub Menu
+
+        .sub-menu {
+            display: none;
+            .sub-item {
+                a {
+                    font-size: 13px;
+                }
+                .side-icon {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 1px;
+                        border-radius: 3px;
+                        background-color: #6d6d6d;
+                        top: -5.3px;
+                        transform: rotate(40deg);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 1px;
+                        border-radius: 3px;
+                        background-color: #6d6d6d;
+                        top: -3.2px;
+                        transform: rotate(-40deg);
+                    }
+                }
+            }
+        }
+        .show {
+            display: block;
+        }
+    }
+}
+#navbar {
+    background-color: $white;
+    height: $navbar-height;
+    width: 100%;
+    top: 0px;
+    border-bottom: 1px solid $border-color;
+    line-height: $navbar-height;
+    z-index: 99;
+
+    #btn-aside-toggle {
+        transition: all 0.2s linear;
+        float: right; // Replace
+        padding: 0px 20px;
+        font-size: 26px;
+        cursor: pointer;
+        &:hover {
+            background-color: $blue;
+            color: #ffff;
+        }
+    }
+
+    /* IF Clicked Button #btn-sidebar-toggle Start This Action*/
+    .toggle {
+        right: -260px !important; // Replace
+    }
+
+    .profile {
+        button {
+            background-color: transparent !important;
+        }
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .message {
+        margin-top: 10px;
+        color: #212121;
+        display: block;
+        text-align: center;
+        line-height: 52px;
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        background-color: #eee;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        .count {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 11px;
+            background-color: #dc3545;
+            width: 15px;
+            height: 15px;
+            line-height: 15px ;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
+   
+}
+
+@media (max-width: 768px) {
+    #aside {
+        .aside-overlay {
+            background-color: transparent !important;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            width: calc(100% - 260px);
+            display: none;
+        }
+    }
+}

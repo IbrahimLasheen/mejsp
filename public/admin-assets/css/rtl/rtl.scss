@@ -1,0 +1,96 @@
+
+body {
+    direction: rtl;
+    padding-right: 260px; // Replace
+}
+section,
+div,
+main,
+a,
+h1,
+span,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+small,
+li,
+ul,
+ol,input,textarea{
+    text-align: right;
+}
+
+
+
+// Aside Bar 
+#aside {
+    right: 0px; // Replace
+    // ul li a
+    .side-menu {
+        .side-item {
+            a {
+                .arrow-icon {
+                    transition: all .1s ease-in-out;
+                    float: left; // Replace
+                    transform: rotate(360deg); // Replace
+                    line-height: 15px;
+                }
+            }
+            // Active Link
+            .active {
+                &::before {
+                    right: -1px; // Replace
+                }
+            }
+
+            // Sub Menu
+            .sub-menu {
+                .sub-item {
+                    .side-icon {
+                        &::before {
+                            right: 11px; // Replace
+                            transform: rotate(-40deg); // Replace
+                        }
+
+                        &::after {
+                            right: 11px; // Replace
+                            transform: rotate(40deg); // Replace
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.toggle{
+    right: -260px !important; // Replace
+}
+
+#navbar{
+    padding-left: 15px;
+    .profile{
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    body{
+        padding-right: 0px !important; // Replace
+    }
+
+    .toggle{
+        right: 0px !important; // Replace
+    }
+    #aside {
+        right: -260px;// Replace
+        .aside-overlay {
+            left: 0px; // Replace
+        }
+    }
+
+
+}
